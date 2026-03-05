@@ -7,8 +7,10 @@ Usa .pop() para eliminar "borrar".
 Muestra con alert() la frase unida por espacios.
 */
 
-let palabras = ["programar", "es"];
+
 function construirFrase() {
+    let palabras = ["programar", "es"];
+
     palabras.push("increíble");
     palabras.push("borrar");
     let eliminada = palabras.pop("borrar");
@@ -26,13 +28,12 @@ El primer alumno de la fila entra a clases (usa .shift() y guarda ese nombre en 
 Muestra un alert() que diga: "Entró [nombre] y la fila ahora es: [el resto del arreglo]".
 */
 
-let alumnos = ["Juan", "María", "Pedro"];
+
 function gestionFila() {
+    let alumnos = ["Juan", "María", "Pedro"];
     alumnos.unshift("Luis");
-
-    alert(`Entró ${alumnos[0]} y la fila ahora es: ${alumnos[1]}`);
-
-    let alumno = alumno.shift();
+    let salon = [alumnos.shift()]
+    alert(`Entró ${salon[0]} y la fila ahora es: ${alumnos.join(", ")}`);
 }
 
 
@@ -43,12 +44,11 @@ Construye la frase: "5 gatos negros duermen plácidamente".
 Muestra el resultado con alert().
 */
 
-let datos = [3, "gatos", "negros", "duermen"];
-function reordenandoNumeros() {
-    datos.shift()
-    datos.unshift(5)
 
-    alert(`Frase: ${datos[0]} ${datos[1]} ${datos[2]} ${datos[3]} plácidamente`);
+function reordenandoNumeros() {
+    let datos = [3, "gatos", "negros", "duermen"];
+    datos[0] += 2;
+    alert(`Frase: ${datos.join(" ")} plácidamente`);
 }
 
 /*Ejercicio 4: Coordenadas en la Matriz (Suma Simple)
@@ -62,11 +62,12 @@ Suma ambos valores y muestra el resultado con un alert()
 que explique qué posiciones sumaste (ej: "Suma de [0][0] y [1][1]").
 */
 
-let matriz = [
-    [10, 20],
-    [30, 40]
-];
+
 function sumaValores() {
+    let matriz = [
+        [10, 20],
+        [30, 40]
+    ];
     let num1 = matriz[0][0];
     let num2 = matriz[1][1];
     let suma = num1 + num2;
@@ -81,9 +82,33 @@ Usa .push() para agregar el número 5 al mismo sub-arreglo donde está el 4.
 Muestra la matriz completa en un alert().
 */
 
-let datoss = [1, [2, [3, 4]]];
-function datoss() {
-    datoss.push()
-    alert(`Matriz: ${datoss}`);
+function agregarDato() {
+    let datos = [1, [2, [3, 4]]];
+    datos[1][1][2].push(5)
+    alert(`Datos: ${datos.join(" - ")}`);
 }
 
+/* Ejercicio 6: Traductor de Acciones (Matriz + Arreglo)
+Instrucciones: Define let sujetos = ["El programador", 
+"La computadora"]; y una matriz let verbos = [["codifica", "analiza"], ["falla", "reinicia"]];.
+Crea una función que tome a "El programador" y la acción "analiza".
+Concatena la frase y lánzala por alert().
+*/
+
+function traductor() {
+    let sujetos = ["El programador", "La computadora"];
+    let verbos = [["codifica", "analiza"], ["falla", "reinicia"]];
+
+
+}
+
+/* Ejercicio 7: Limpieza de Datos (Pop y Unshift)
+Instrucciones: Tienes el arreglo let inventario = ["Error", "Laptop", "Mouse", "Teclado", "Virus"];.
+Elimina el primer elemento ("Error") y el último ("Virus").
+Agrega "Monitor" al inicio.
+Muestra el inventario final con alert().
+*/
+
+function limpiezaDatos() {
+    
+}
