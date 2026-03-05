@@ -84,8 +84,8 @@ Muestra la matriz completa en un alert().
 
 function agregarDato() {
     let datos = [1, [2, [3, 4]]];
-    datos[1][1][2].push(5)
-    alert(`Datos: ${datos.join(" - ")}`);
+    datos[1][1][2].push(5);
+    alert(datos);
 }
 
 /* Ejercicio 6: Traductor de Acciones (Matriz + Arreglo)
@@ -99,7 +99,7 @@ function traductor() {
     let sujetos = ["El programador", "La computadora"];
     let verbos = [["codifica", "analiza"], ["falla", "reinicia"]];
 
-
+    alert(`${sujetos[0]} ${verbos[0][1]}`);
 }
 
 /* Ejercicio 7: Limpieza de Datos (Pop y Unshift)
@@ -110,5 +110,30 @@ Muestra el inventario final con alert().
 */
 
 function limpiezaDatos() {
-    
+    let inventario = ["Error", "Laptop", "Mouse", "Teclado", "Virus"];
+    inventario.shift()
+    inventario.pop()
+    inventario.unshift("Monitor")
+    alert(`Inventario: ${inventario.join(", ")}`);
+}
+
+/*Ejercicio 8: La Matriz de Identidad Modificada
+Instrucciones: Define una matriz de 3x3 llena de ceros.
+let tablero = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+];
+Cambia todos los ceros de la diagonal principal (superior izquierda a inferior derecha) por el número 1.
+Muestra el resultado de la fila central por alert().
+[0], [1][1], and [2][2]]
+*/
+
+function modificarMatriz() {
+    let tablero = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+    ];
+
 }
