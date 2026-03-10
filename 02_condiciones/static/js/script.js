@@ -11,8 +11,8 @@ function edadApp() {
         alert("Ingrese una edad valida.");
     } else if (edad <= 18) {
         alert("Acceso denegado: necesitas ser mayor de edad");
-    } else if () {
-
+    } else if (18< 3) {
+        alert("Acceso permitido a la App");
     }
 }
 
