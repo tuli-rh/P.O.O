@@ -9,9 +9,9 @@ function edadApp() {
 
     if (edad < 0 && edad >= 130) {
         alert("Ingrese una edad valida.");
-    } else if (edad <= 18) {
+    } else if (edad < 18) {
         alert("Acceso denegado: necesitas ser mayor de edad");
-    } else if (18< 3) {
+    } else if (edad >=18) {
         alert("Acceso permitido a la App");
     }
 }
@@ -48,9 +48,9 @@ function nuevoProducto() {
     let nuevoProducto = prompt("Ingrese un producto: ");
 
     if (nuevoProducto.includes(productos)) {
-        
+        alert(productos);
     } else {
-        
+        alert("El producto ya está en el inventario");
     }
 }
 
