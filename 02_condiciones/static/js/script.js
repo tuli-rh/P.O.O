@@ -7,10 +7,12 @@ Crea una variable edad. Si la edad es 18 o más, muestra por consola:
 function edadApp() {
     let edad = parseInt(prompt("Ingrese su edad: "));
 
-    if (edad >= 18) {
-        alert("Acceso permitido a la App.");
-    } else if (edad < 18) {
+    if (edad < 0 && edad >= 130) {
+        alert("Ingrese una edad valida.");
+    } else if (edad <= 18) {
         alert("Acceso denegado: necesitas ser mayor de edad");
+    } else if () {
+
     }
 }
 
@@ -27,6 +29,7 @@ function nombre() {
 
     if (nombre !== "") {
         usuarios.push(nombre);
+        alert(`Hola ${usuarios}`);
     } else {
         alert("Error: El nombre no puede estar en blanco");
     }
