@@ -136,6 +136,10 @@ function modificarMatriz() {
         [0, 0, 0]
     ];
 
+    tablero[0][0] = 1;
+    tablero[1][1] = 1;
+    tablero[2][2] = 1;
+    alert(`Fila central: ${tablero[1]}`);
 
 }
 
