@@ -130,6 +130,8 @@ function sistemaNotas() {
         alert("Aprobado, vas a examen");
     } else if (notas < 4) {
         alert("Reprobado");
+    } else {
+        alert("Ingrese una nota valida.")
     }
 }
 
@@ -144,7 +146,7 @@ Si no está, muestra: "Lo siento, no estás en la lista de invitados".
 
 function buscarInvitados() {
     let invitados = ["Ana", "Luis", "Camila", "Diego"];
-    let personas = prompt("Ingrese su nombre");
+    let personas = prompt("Ingrese su nombre: ");
 
     if (invitados.includes(personas)) {
         alert(`¡Bienvenido/a ${personas}! Pasa a la fiesta`);
@@ -163,6 +165,17 @@ Accede a la sección elegida. Si el producto solicitado
 está en esa sub-lista, muestra: "Producto encontrado en el estante".
 Si no, muestra: "No tenemos ese producto en esa sección".
 */
+function almacenMatrices() {
+    let estanteria = [ ["Manzanas", "Peras"], ["Leche", "Yogur"] ];
+    let seccion = prompt("Ingrese una sección (0 o 1): ");
+    let producto = prompt("Ingrese un peoducto: ");
+
+    if (estanteria[seccion].includes(producto)) {
+        alert("Producto encontrado en el estante");
+    } else {
+        alert("No tenemos ese producto en esa sección");
+    }
+}
 
 
 
@@ -174,3 +187,10 @@ Si el nombre existe y esVip es true: Agregarlo al inicio con .unshift().
 Si el nombre existe y esVip es false: Agregarlo al final con .push().
 Al final, muestra cuántas personas hay en total usando .length.
 */
+
+function registroVisitas() {
+    let bitacora = [];
+    let nombreVisita;
+    let esVip;
+
+}
