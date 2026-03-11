@@ -190,9 +190,24 @@ Si el nombre existe y esVip es false: Agregarlo al final con .push().
 Al final, muestra cuántas personas hay en total usando .length.
 */
 
+let bitacora = [];
 function registroVisitas() {
-    let bitacora = [];
-    let nombreVisita;
-    let esVip;
+    let nombreVisita = prompt("ingrese su nombre");
+    let esVip = parseInt(prompt("¿Eres VIP? \n0 = no \n1 = si"));
+    nombreVisita = nombreVisita.trim();
+
+    if (nombreVisita == "") {
+        alert("el nombre no puede estar vacío.");
+    } else if (bitacora.includes(nombreVisita)){
+        alert("Esa persona ya está en la lista");
+    } else if (esVip == 1) {
+        bitacora.unshift(nombreVisita);
+        alert(`Agregado correctamente a la lista: \n ${bitacora.join(", ")} \n Personas en total: ${bitacora.length}`);
+    } else if (esVip == 0) {
+        bitacora.push(nombreVisita);
+        alert(`Agregado correctamente a la lista: \n ${bitacora.join(", ")} \n Personas en total: ${bitacora.length}`);
+    } else {
+        alert("Ingrese valores validos.");
+    }
 
 }
