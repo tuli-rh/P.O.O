@@ -166,11 +166,13 @@ está en esa sub-lista, muestra: "Producto encontrado en el estante".
 Si no, muestra: "No tenemos ese producto en esa sección".
 */
 function almacenMatrices() {
-    let estanteria = [ ["Manzanas", "Peras"], ["Leche", "Yogur"] ];
+    let estanteria = [["Manzanas", "Peras"], ["Leche", "Yogur"]];
     let seccion = prompt("Ingrese una sección (0 o 1): ");
     let producto = prompt("Ingrese un peoducto: ");
 
-    if (estanteria[seccion].includes(producto)) {
+    if (seccion !== 0 || seccion !== 1) {
+        alert("Ingrese una sección valida, 0 o 1.");
+    } else if (estanteria[seccion].includes(producto)) {
         alert("Producto encontrado en el estante");
     } else {
         alert("No tenemos ese producto en esa sección");
