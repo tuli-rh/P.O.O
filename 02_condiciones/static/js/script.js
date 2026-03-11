@@ -11,7 +11,7 @@ function edadApp() {
         alert("Ingrese una edad valida.");
     } else if (edad < 18) {
         alert("Acceso denegado: necesitas ser mayor de edad");
-    } else if (edad >=18) {
+    } else if (edad >= 18) {
         alert("Acceso permitido a la App");
     }
 }
@@ -47,10 +47,10 @@ function nuevoProducto() {
     let productos = ["celular", "teclado", "mouse"];
     let nuevoProducto = prompt("Ingrese un producto: ");
 
-    if (nuevoProducto.includes(productos)) {
-        alert(productos);
-    } else {
+    if (productos.includes(nuevoProducto)) {
         alert("El producto ya está en el inventario");
+    } else {
+        alert("El producto no está en el inventario");
     }
 }
 
@@ -63,8 +63,17 @@ elimina la última caja con .pop() y muestra: "Bodega llena, eliminando último 
 Si es 5 o menos, muestra: "Espacio disponible".
 */
 
+function controlStock() {
+    let bodega = ["caja1", "caja2", "caja3", "caja4", "caja5", "caja6"];
 
+    if (bodega.length <= 5) {
 
+        alert("Espacio disponible");
+    } else {
+        alert("Bodega llena, eliminando último ingreso");
+        bodega.pop();
+    }
+}
 
 
 /*
@@ -74,7 +83,16 @@ Si el primer elemento (índice 0) es igual a "error_404",
 elimínalo usando .shift() y muestra la cola limpia.
 Si no, muestra: "La lista de espera está correcta".
 */
+function limpiezaDatos() {
+    let colaEspera = ["error_404", "Juan", "Sofía"];
 
+    if (colaEspera[0] === "error_404") {
+        colaEspera.shift();
+        alert(colaEspera);
+    } else {
+        alert("La lista de espera está correcta");
+    }
+}
 
 
 /*6. Acceso VIP
@@ -83,17 +101,37 @@ Declara la variable rol.
 Si el rol es "Admin", agrega el nombre al inicio de la lista con .unshift() para que tenga prioridad.
 Si no es Admin, agrégalo al final con .push().
 */
+function accesoVIP() {
+    let foro = ["User1", "User2"];
+    let rol = prompt("Ingrese su usuario/rol: ")
+    if (rol.toLowerCase() === "admin") {
+        foro.unshift(rol);
+        alert(foro);
+    } else {
+        foro.push(rol);
+        alert(foro);
+    }
+}
 
 
-
-/*Bloque 4: Lógica Avanzada y Matrices (Dificultad Alta)
-7. Sistema de Calificaciones Chile (Escala 1 a 7)
+/*7. Sistema de Calificaciones Chile (Escala 1 a 7)
 Crea una variable nota.
 Si la nota es 6 o superior: "Excelente, eximido".
 Si la nota es entre 4 y 5.9: "Aprobado, vas a examen".
 Si es menor a 4: "Reprobado".
 (Pista: Usa else if).
 */
+
+function sistemaNotas() {
+    let notas = parseFloat(prompt("Ingrese su nota: "));
+    if (notas >= 6) {
+        alert("Excelente, eximido");
+    } else if (notas === 4 && notas <= 5.9) {
+        alert("Aprobado, vas a examen");
+    } else if (notas < 4) {
+        alert("Reprobado");
+    }
+}
 
 
 
@@ -104,7 +142,16 @@ Si la persona está en la lista, muestra: "¡Bienvenido/a [nombre]! Pasa a la fi
 Si no está, muestra: "Lo siento, no estás en la lista de invitados".
 */
 
+function buscarInvitados() {
+    let invitados = ["Ana", "Luis", "Camila", "Diego"];
+    let personas = prompt("Ingrese su nombre");
 
+    if (invitados.includes(personas)) {
+        alert(`¡Bienvenido/a ${personas}! Pasa a la fiesta`);
+    } else {
+        alert("Lo siento, no estás en la lista de invitados");
+    }
+}
 
 
 
