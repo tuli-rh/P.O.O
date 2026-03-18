@@ -7,11 +7,24 @@ Captura el nombre escrito en el input.
 Usa .push() para meter a ese alumno al final del arreglo asistencia.
 Modifica el textContent del párrafo para mostrar: "Alumnos presentes: " seguido del arreglo.
 Limpia el input vaciando su .value.
-*/ 
+*/
+let asistencia = [];
+function agregarLista(nombre) {
+    asistencia.push(nombre);
+    return asistencia.join(", ");
+}
+
 function listadoAsistencia() {
-    const input = document.getElementById("input1").value;
-    
-    
+    const container = document.getElementById("resultado-container1");
+    const result1 = document.getElementById("result1");
+    const input = document.getElementById("input1");
+    let nombre = input.value;
+
+    let resultado = agregarLista(nombre);
+    result1.textContent = resultado;
+
+    input.value = "";
+    container.classList.remove("d-none");
 }
 
 /* Ejercicio 2: Fila de Urgencias Médicas (unshift e if)
@@ -24,7 +37,30 @@ Usa un if para revisar si el input NO está vacío (!== "").
 Si escribieron un nombre, usa .unshift() para agregarlo al inicio del arreglo pacientes.
 Muestra en el textContent del párrafo: "Próximos a atender: " seguido del arreglo.
 Limpia el input.
-*/ 
+*/
+let pacientes = ["Carlos", "María", "Diego"];
+function agregarUrgencia(nombre) {
+    pacientes.unshift(nombre);
+    return pacientes.join(", ");
+}
+
+function ingregarUrgencia() {
+    const container = document.getElementById("resultado-container2");
+    const result2 = document.getElementById("result2");
+    const input = document.getElementById("input2");
+
+    if (input.value !== "") {
+        let nombre = input.value;
+        let resultado = agregarUrgencia(nombre);
+        result2.textContent = resultado;
+        input.value = "";
+        container.classList.remove("d-none");
+    } else {
+        alert("El nombre no puede estar vacío.");
+    }
+}
+
+
 
 /* Ejercicio 3: Sistema de Delivery (shift, pop e if)
 Contexto: Un restaurante tiene pedidos listos. 
@@ -65,7 +101,7 @@ En cada vuelta, súmale (+=) a registroPagos el producto y el número de la cuot
 (Ej: producto + " - Cuota " + i + " | ").
 Fuera del ciclo, muestra la variable registroPagos en el textContent del párrafo.
 Limpia el input.
-*/ 
+*/
 
 /* Ejercicio 6: Filtro de Presupuesto (for e if)
 Contexto: Una vitrina virtual tiene varios precios. El cliente ingresa cuánta plata tiene en el bolsillo, 
@@ -93,7 +129,7 @@ Dentro de procesarSueldo, llama a tu función calcularDescuentos()
 pasándole el número capturado, y guarda lo que te devuelve en una variable llamada sueldoLiquido.
 Modifica el textContent del párrafo: "Tu sueldo a pago es: $" + sueldoLiquido.
 Limpia el input.
-*/ 
+*/
 
 
 /* Ejercicio 8: El Carrito de Compras (Reto Final - Delegación de tareas)
