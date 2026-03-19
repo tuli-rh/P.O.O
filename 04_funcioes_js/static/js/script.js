@@ -73,6 +73,29 @@ Usa un else if. Si escribió "cancelar", usa .pop() para eliminar la última com
 Muestra en el textContent: "Pedidos pendientes: " seguido del arreglo.
 Limpia el input.
 */
+let entregas = ["Pizza", "Sushi", "Hamburguesa", "Ensalada"];
+function actualizarPedido(pedido) {
+    if (pedido == "despachar") {
+        entregas.shift()
+    } else if (pedido == "cancelar") {
+        entregas.pop;
+    } else {
+        alert("Ingresar un valor valido.")
+    }
+    return `Pedidos pendientes: ${entregas.join(", ")}`;
+}
+
+function gestionarPedidos() {
+    const container = document.getElementById("resultado-container3");
+    const result3 = document.getElementById("result3");
+    let input = document.getElementById("input3").value;
+    let result = actualizarPedido(input);
+    result3.textContent = result;
+    input.value = "";
+    container.classList.remove("d-none");
+
+}
+
 
 
 /* Ejercicio 4: Validador de Códigos de Descuento (for e if)
@@ -88,6 +111,30 @@ la variable mensaje a "¡Éxito! Código aceptado".
 Fuera del ciclo, inyecta la variable mensaje en el textContent del párrafo.
 Limpia el input.
 */
+let codigosValidos = ["VERANO2026", "PROMO50", "CLIENTEVIP"];
+function buscarCodigo(codigo) {
+    let mensaje = "Codigo invalido o expirado";
+    for (let i = 0; i < codigosValidos.length; i++) {
+        if (codigo == codigosValidos[i]) {
+            mensaje = "¡Éxito! codigo aceptado";
+            return "¡Éxito! codigo aceptado";
+        } else {
+            mensaje = "ingresa un codigo valido";
+        } 
+    }
+    return mensaje;
+}
+
+function verificarCodigo() {
+    let input = document.getElementById("input4");
+    let codigo = input.value;
+    const result4 = document.getElementById("result4");
+    const container = document.getElementById("resultado-container4");
+    let result = buscarCodigo(codigo);
+    result4.textContent = result;
+    input.value = "";
+    container.classList.remove("d-none");
+}
 
 
 /* Ejercicio 5: Simulador de Cuotas (for)
