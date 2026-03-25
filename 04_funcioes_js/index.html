@@ -103,9 +103,11 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 5</h5>
-                <p class="card-text">Simulador de Cuotas (for)</p>
-                <a href="#" class="btn btn-primary" onclick="operarIntruso()">Ejecutar</a>
-                <div id="resultado-container5" class="mt-4 d-none">
+                <p class="card-text">Simulador cuotas</p>
+                <input type="text" class="form-control mb-3" id="input5_1" placeholder="">
+                <input type="text" class="form-control mb-3" id="input5_2" placeholder="">
+                <a href="#" class="btn btn-primary" onclick="simularCuotas()">Ejecutar</a>
+                <div id="resultado-container4" class="mt-4 d-none">
                     <h6>Resultado: </h6>
                     <div id="result5" class="alert alert-success fw-bold"></div>
                 </div>
@@ -117,10 +119,11 @@
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 6</h5>
                 <p class="card-text">Filtro de Presupuesto (for e if)</p>
-                <a href="#" class="btn btn-primary" onclick="nombreVIP()">Ejecutar</a>
-                <div id="resultado-container6" class="mt-4 d-none">
+                <input type="text" class="form-control mb-3" id="input6" placeholder="Ingresar codigo">
+                <a href="#" class="btn btn-primary" onclick="verificarCodigo()">Ejecutar</a>
+                <div id="resultado-container4" class="mt-4 d-none">
                     <h6>Resultado: </h6>
-                    <div id="result6" class="alert alert-success fw-bold"></div>
+                    <div id="result4" class="alert alert-success fw-bold"></div>
                 </div>
             </div>
         </div>

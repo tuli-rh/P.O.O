@@ -120,7 +120,7 @@ function buscarCodigo(codigo) {
             return "¡Éxito! codigo aceptado";
         } else {
             mensaje = "ingresa un codigo valido";
-        } 
+        }
     }
     return mensaje;
 }
@@ -150,6 +150,27 @@ Fuera del ciclo, muestra la variable registroPagos en el textContent del párraf
 Limpia el input.
 */
 
+function calcularCuotas(valor, cuota) {
+    let registroPagos = "";
+    for (let i = 1; i <= 3; i++) {
+        registroPagos += ` | Cuota ${i} de ${cuota}: ${parseInt(valor / 3)} |`;
+    }
+    return registroPagos;
+}
+
+function simularCuotas() {
+    const producto = document.getElementById("input5_1");
+    let valorProducto = parseInt(producto.value);
+    const cuotaInput = document.getElementById("input5_2");
+    let cuota = parseInt(cuotaInput.value);
+    const result = document.getElementById("result5");
+    const container = document.getElementById("container5");
+    let resultado = calcularCuotas(valor, cuota);
+    producto.value = "";
+    cuotaInput.value = "";
+    container.classList.remove("d-none");
+}
+
 /* Ejercicio 6: Filtro de Presupuesto (for e if)
 Contexto: Una vitrina virtual tiene varios precios. El cliente ingresa cuánta plata tiene en el bolsillo, 
 y el sistema le muestra solo los precios que le alcanza para pagar.
@@ -163,6 +184,13 @@ súmalo a la variable opciones más un guion (-).
 Muestra el resultado en el textContent del párrafo.
 Limpia el input.
 */
+let vitrina = [2500, 15000, 8000, 30000, 5000];
+let opciones = "";
+function comprobarPresupuesto(params) {
+
+}
+
+
 
 /* Ejercicio 7: Cálculo de Sueldo Líquido (Una función llama a otra)
 Contexto: El usuario ingresa su Sueldo Bruto. 
