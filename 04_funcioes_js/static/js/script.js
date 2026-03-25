@@ -191,7 +191,6 @@ function comprobarPresupuesto(params) {
 }
 
 
-
 /* Ejercicio 7: Cálculo de Sueldo Líquido (Una función llama a otra)
 Contexto: El usuario ingresa su Sueldo Bruto. 
 Una función matemática oculta descuenta el 20% (AFP y Salud) y le devuelve el 
